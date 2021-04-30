@@ -1,7 +1,7 @@
 import gql from 'graphql-tag/lib/graphql-tag.umd';
 import { useMutation } from '@apollo/client';
 import { Router } from 'next/router';
-import { useForm } from '../lib/useForm';
+import useForm from '../lib/useForm';
 import Form from './styles/Form';
 import DisplayError from './ErrorMessage';
 import { ALL_PRODUCTS_QUERY } from './Products';
