@@ -35,7 +35,7 @@ const RequestReset = () => {
     <Form method="POST" onSubmit={handleSubmit}>
       <h2>Request Password Reset</h2>
       <DisplayError error={error} />
-      <fieldset>
+      <fieldset aria-disabled={loading} aria-busy={loading}>
         {data?.sendUserPasswordResetLink === null && (
           <p>Success! Check your email for a link!</p>
         )}

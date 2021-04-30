@@ -43,7 +43,7 @@ const SignUp = () => {
     <Form method="POST" onSubmit={handleSubmit}>
       <h2>Sign Up Account</h2>
       <DisplayError error={error} />
-      <fieldset>
+      <fieldset aria-disabled={loading} aria-busy={loading}>
         {data?.createUser && (
           <p>
             Hi {data?.createUser?.name} Signed up with:{' '}

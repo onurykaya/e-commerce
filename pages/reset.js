@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Reset from '../components/Reset';
 
 const ResetPage = ({ query }) => {
@@ -15,6 +16,10 @@ const ResetPage = ({ query }) => {
       <Reset token={query?.token} />
     </>
   );
+};
+
+ResetPage.propTypes = {
+  query: PropTypes.string.isRequired,
 };
 
 export default ResetPage;
