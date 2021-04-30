@@ -37,7 +37,6 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await signin();
-    console.log(res);
     resetForm();
   };
   const error =

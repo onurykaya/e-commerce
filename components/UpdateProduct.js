@@ -45,7 +45,6 @@ const UpdateProduct = ({ id }) => {
   ] = useMutation(UPDATE_PRODUCT_MUTATION);
 
   const { inputs, handleChange, clearForm } = useForm(data?.Product);
-  console.log('inputss => ', inputs);
   if (loading) return <p>Loading...</p>;
   return (
     <Form
@@ -59,7 +58,6 @@ const UpdateProduct = ({ id }) => {
             price: inputs?.price,
           },
         });
-        console.log(res);
         /* // Submit the inputfields to the backend
         const res = await createProduct();
         clearForm();

@@ -31,8 +31,6 @@ const RequestReset = () => {
     resetForm();
   };
 
-  console.log('data =>', data);
-
   return (
     <Form method="POST" onSubmit={handleSubmit}>
       <h2>Request Password Reset</h2>

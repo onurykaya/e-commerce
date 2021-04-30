@@ -5,7 +5,6 @@ import SignOut from './SignOut';
 
 const Nav = () => {
   const user = useUser();
-  console.log('user => ', user);
   return (
     <NavStyles>
       <Link href="/products">Products</Link>

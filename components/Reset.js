@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client/core';
 import { useMutation } from '@apollo/client';
+import PropTypes from 'prop-types';
 import Form from './styles/Form';
 import useForm from '../lib/useForm';
 import DisplayError from './ErrorMessage';
@@ -42,8 +43,6 @@ const Reset = ({ token }) => {
     ? data?.redeemUserPasswordResetToken
     : undefined;
 
-  console.log('data =>', error);
-
   return (
     <Form method="POST" onSubmit={handleSubmit}>
       <h2>Reset Your Password</h2>
@@ -78,6 +77,10 @@ const Reset = ({ token }) => {
       </fieldset>
     </Form>
   );
+};
+
+Reset.propTypes = {
+  token: PropTypes.string.isRequired,
 };
 
 export default Reset;

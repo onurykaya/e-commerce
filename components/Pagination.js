@@ -17,9 +17,7 @@ const PAGINATION_QUERY = gql`
 
 const Pagination = ({ page }) => {
   const { error, loading, data } = useQuery(PAGINATION_QUERY);
-  // const { count } = data?._allProductsMeta;
   const pageCount = Math.ceil(data?._allProductsMeta?.count / perPage);
-  console.log(page);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <DisplayError error={error} />;
